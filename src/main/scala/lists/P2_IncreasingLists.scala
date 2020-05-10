@@ -1,6 +1,6 @@
 package lists
 
-object P2 extends App {
+object P2_IncreasingLists extends App {
 
 /*
 Create List[List[1], List[1,2], List[1,2,3], ....]

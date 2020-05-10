@@ -1,8 +1,10 @@
 package sorting
 
-import sorting.P1.mergeLists
+import sorting.P1_MergeSortedLists.mergeLists
 
-object P2 extends App {
+import scala.annotation.tailrec
+
+object P2_MergeSort extends App {
 
   // sorting list using sorting/P1 mergeLists function
   /**
@@ -19,6 +21,7 @@ object P2 extends App {
 
   def sort[T](list: List[T])(implicit ord: Ordering[T]): List[T] = {
 
+    @tailrec
     def mergeList(acc: List[List[T]]): List[List[T]] = {
       acc match {
         case x1 :: x2 :: xs if x1.size == x2.size => mergeList(mergeLists(x1, x2) :: xs)

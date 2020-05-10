@@ -1,6 +1,6 @@
 package functions
 
-object P1 extends App {
+object P1_CallByNameAndValue extends App {
 
 // https://stackoverflow.com/questions/13337338/call-by-name-vs-call-by-value-in-scala-clarification-needed
 

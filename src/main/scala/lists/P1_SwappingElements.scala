@@ -1,6 +1,6 @@
 package lists
 
-object P1 extends App{
+object P1_SwappingElements extends App{
 
   // Swapping elements in String, starting with the first.
   // 1st with 2nd, 3rd with 4th and so on

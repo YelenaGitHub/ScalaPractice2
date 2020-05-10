@@ -2,7 +2,7 @@ package sorting
 
 import scala.annotation.tailrec
 
-object P1 extends App {
+object P1_MergeSortedLists extends App {
 
   // merge 2 sorted lists into one with the same sorting order
 

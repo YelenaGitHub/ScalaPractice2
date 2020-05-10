@@ -1,6 +1,6 @@
 package patternmatching
 
-object P1 extends App {
+object P1_at extends App {
 
   // using at
 

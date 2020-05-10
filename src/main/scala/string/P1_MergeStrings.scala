@@ -1,8 +1,8 @@
 package string
 
-object P1 extends App {
+object P1_MergeStrings extends App {
 
-  // Merge 2 strings, by the same elements inicies.
+  // Merge 2 strings, by the same elements indicies.
 
   def f(args: Array[String]): Unit = {
     val res = for {
