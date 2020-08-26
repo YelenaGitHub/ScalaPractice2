@@ -1,4 +1,4 @@
-package lists
+package collections.lists
 
 object P1_SwappingElements extends App{
 

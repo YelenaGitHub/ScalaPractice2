@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 object P1_MergeSortedLists extends App {
 
-  // merge 2 sorted lists into one with the same sorting order
+  // merge 2 sorted collections.lists into one with the same sorting order
 
   def mergeLists[T](l1: List[T], l2: List[T])(implicit ord: Ordering[T]): List[T] = {
     import ord._

@@ -3,7 +3,7 @@ package traits
 object P1 extends App {
 
   trait NamedConst {
-    def name: String = this.getClass.getName.replace("$", "")
+    def name: String = this.getClass.getSimpleName.replace("$", "")
 
     override def toString: String = name
   }
@@ -12,6 +12,6 @@ object P1 extends App {
   object integerValue extends NamedConst
 
 
-  stringValue.name
+  println(stringValue.name)
 
 }

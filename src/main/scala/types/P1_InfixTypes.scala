@@ -31,5 +31,5 @@ object P1_InfixTypes2 extends App {
   val juliet = Person("Juliet")
 
   announceCouple(romeo loves juliet)
-  
+
 }
