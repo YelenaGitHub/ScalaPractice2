@@ -49,37 +49,24 @@ def addTwoNumbers(l1: ListNode, l2: ListNode, reminder: Int = 0): ListNode = {
 
 // optimized, uses node1 and node2 for storage
 //  def addTwoNumbers(l1: ListNode, l2: ListNode, reminder: Int = 0): ListNode = {
-//    var i = 0
 //
 //    (l1, l2, reminder) match {
 //      case (null, null, 0) => null
 //      case (node1, null, _) => {
 //        val sum = node1.x + reminder
 //        node1.x = sum % 10
-//        i = i + 1
-//        println(s"$i.Not null node1 and empty node2. node1:" + LocalDateTime.now())
-//        prinlnList(node1)
-//        println("---")
 //        node1.next = addTwoNumbers(node1.next, null, sum / 10)
 //        node1
 //      }
 //      case (null, node2, _) => {
 //        val sum = node2.x + reminder
 //        node2.x = sum % 10
-//        i = i + 1
-//        println(s"$i. Empty node1, non empty node2:" + LocalDateTime.now())
-//        prinlnList(node2)
-//        println("---")
 //        node2.next = addTwoNumbers(null, node2.next, sum / 10)
 //        node2
 //      }
 //      case (node1, node2, _) =>
 //        val sum = node1.x + node2.x + reminder
 //        node1.x = sum % 10
-//        i = i + 1
-//        println(s"$i. Not null nodes. Node1:" + LocalDateTime.now())
-//        prinlnList(node1)
-//        println("---")
 //        node1.next = addTwoNumbers(node1.next, node2.next, sum / 10)
 //        node1
 //    }
