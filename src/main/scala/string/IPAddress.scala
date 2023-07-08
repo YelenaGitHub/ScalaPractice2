@@ -1,7 +1,7 @@
 package string
 
 object IPAddress extends App {
-  
+
   def isValidIPAddress(s: String): Boolean = {
     val octets = s.split('.')
     octets.length == 4 && octets.forall { octet =>
