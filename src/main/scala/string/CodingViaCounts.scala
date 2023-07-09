@@ -2,13 +2,13 @@ package string
 
 object CodingViaCounts extends App {
 
-// Преобразование строки вида "AAAABBBCCD" в "4A3B2C1D" 
+// Преобразование строки вида "AAAABBBCCD" в "4A3B2C1D"
 
   def coding(s: String): String = {
 
     s.foldRight(List.empty[(Char, Int)]) {
-      case(char, (headChar, headCount) :: tail) if (char == headChar) => (char, headCount + 1) :: tail
-      case (char, acc) => (char, 1) :: acc
+      case(e, (headChar, headCount) :: tail) if (e == headChar) => (e, headCount + 1) :: tail
+      case (e, acc) => (e, 1) :: acc
     }
       .map { case (char, count) => s"$count$char"}
       .mkString
@@ -32,13 +32,14 @@ object CodingViaCounts extends App {
   println(res)
 
   val res2 = s.foldLeft(List.empty[(Char, Int)]) {
-    case ((headChar, headCount) :: tail, element) if (headChar == element) => (headChar, headCount + 1) :: tail
-    case (accumulated, element) => (element, 1) :: accumulated
+    case ((headChar, headCount) :: tail, e) if (headChar == e) => (headChar, headCount + 1) :: tail
+    case (accumulated, e) => (e, 1) :: accumulated
+//       val a1: Seq[(Char, Int)] = accumulated
+//       val a2: Char = element
   }
     .map { case (k, v) => s"$k$v" }
     .mkString
-    .reverse
+    .reverse // !
 
   println(res2)
-
 }
