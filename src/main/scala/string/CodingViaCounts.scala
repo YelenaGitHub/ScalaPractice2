@@ -31,4 +31,14 @@ object CodingViaCounts extends App {
 
   println(res)
 
+  val res2 = s.foldLeft(List.empty[(Char, Int)]) {
+    case ((headChar, headCount) :: tail, element) if (headChar == element) => (headChar, headCount + 1) :: tail
+    case (accumulated, element) => (element, 1) :: accumulated
+  }
+    .map { case (k, v) => s"$k$v" }
+    .mkString
+    .reverse
+
+  println(res2)
+
 }
