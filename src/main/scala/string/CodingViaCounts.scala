@@ -2,7 +2,7 @@ package string
 
 object CodingViaCounts extends App {
 
-// Преобразование строки вида "AAAABBBCCD" в "4A3B2C1D" (это разновидность предыдущей задачи)
+// Преобразование строки вида "AAAABBBCCD" в "4A3B2C1D" 
 
   def coding(s: String): String = {
 
