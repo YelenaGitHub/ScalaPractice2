@@ -7,7 +7,7 @@ object CodingViaCounts extends App {
   def coding(s: String): String = {
 
     s.foldRight(List.empty[(Char, Int)]) {
-      case(e, (headChar, headCount) :: tail) if (e == headChar) => (e, headCount + 1) :: tail
+      case (e, (headChar, headCount) :: tail) if (e == headChar) => (e, headCount + 1) :: tail
       case (e, acc) => (e, 1) :: acc
     }
       .map { case (char, count) => s"$count$char"}
@@ -29,13 +29,11 @@ object CodingViaCounts extends App {
   val s = "AAAABBBCCD"
   val res = coding(s)
 
-  println(res)
+//  println(res)
 
   val res2 = s.foldLeft(List.empty[(Char, Int)]) {
     case ((headChar, headCount) :: tail, e) if (headChar == e) => (headChar, headCount + 1) :: tail
     case (accumulated, e) => (e, 1) :: accumulated
-//       val a1: Seq[(Char, Int)] = accumulated
-//       val a2: Char = element
   }
     .map { case (k, v) => s"$k$v" }
     .mkString
